@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  docker-node:
+    image: node:latest
+    container_name: kindle_whatsapp
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    ports:
+      - 3000:3000
+    command: node index.js
+    restart: always
+    
+    
